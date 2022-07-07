@@ -23,11 +23,11 @@ public class VideoGameService {
     public List<VideoGame> getVideoGames(){
         return videoGameRepository.findAll();
     }
-//
-//    public List<VideoGame> getVideoGames(){
-//        return videoGameRepository.findAll();
-//    }
-//
+
+    public VideoGame getById(Integer id){
+        return videoGameRepository.findById(id).orElse(null);
+    }
+
 
 }
 
